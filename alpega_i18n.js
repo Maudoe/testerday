@@ -21,7 +21,7 @@ ui:{
   bLog:`Logística`, bApi:`API`, bSel:`Selenium`, bDb:`BBDD · SQL`,
   easy:`💡 En simple`, techDiv:`Versión técnica (para la entrevista)`, caso:`⚠ Caso / problema`, sol:`✓ Solución`, test:`🧪 Cómo lo prueba el tester`, code:`◈ Código`, out:`⤳ Resultado`,
   player:`Narración de este paso — voz + música`, playErr:`No se pudo cargar el audio. Abrí el HTML desde la carpeta <b>alpega</b> (junto a audio_modales/).`, noAudio:`(audio en preparación)`,
-  more:`Ver caso →`, footer:`Handbook QA Automation · <b>Alpega TMS</b> — caso → solución → cómo lo prueba el tester`
+  more:`Ver caso →`, footer:`Handbook QA Automation · <b>Alpega TMS</b> — caso → solución → cómo lo prueba el tester<span style="display:block;margin-top:11px;color:#8a8f9f;font-size:12.5px">Hecho por <a href="https://www.linkedin.com/in/mauricio-rodriguez-589955137/" target="_blank" rel="noopener" style="color:#d8b884;border-bottom:1px solid rgba(216,184,132,.45)">Mauricio Rodríguez</a> — QA Automation Engineer · Khon Kaen</span>`
  },
  en:{
   choose:`Choose your language`, chooseSub:`You can change it anytime`, enter:`Enter`,
@@ -42,7 +42,7 @@ ui:{
   bLog:`Logistics`, bApi:`API`, bSel:`Selenium`, bDb:`DB · SQL`,
   easy:`💡 In plain words`, techDiv:`Technical version (for the interview)`, caso:`⚠ Case / problem`, sol:`✓ Solution`, test:`🧪 How the tester checks it`, code:`◈ Code`, out:`⤳ Outcome`,
   player:`Narration of this step — voice + music`, playErr:`Couldn't load the audio. Open the HTML from the <b>alpega</b> folder (next to audio_modales/).`, noAudio:`(audio in preparation)`,
-  more:`See case →`, footer:`QA Automation Handbook · <b>Alpega TMS</b> — case → solution → how the tester checks it`
+  more:`See case →`, footer:`QA Automation Handbook · <b>Alpega TMS</b> — case → solution → how the tester checks it<span style="display:block;margin-top:11px;color:#8a8f9f;font-size:12.5px">Built by <a href="https://www.linkedin.com/in/mauricio-rodriguez-589955137/" target="_blank" rel="noopener" style="color:#d8b884;border-bottom:1px solid rgba(216,184,132,.45)">Mauricio Rodríguez</a> — QA Automation Engineer · Khon Kaen</span>`
  }
 },
 
