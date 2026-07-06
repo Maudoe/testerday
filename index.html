@@ -373,7 +373,7 @@ function highlightNode(aid){
 }
 function playAid(aid,chain){
   if(!aid || (READY[LANG]||[]).indexOf(aid)<0) return;
-  curAid=aid; CHAIN=!!chain; CUR=PLIDS.indexOf(aid);
+  curAid=aid; CHAIN=true; CUR=PLIDS.indexOf(aid);   // siempre encadena al siguiente
   AP.src=srcFor(aid); AP.play().catch(function(){});
   highlightNode(aid); updateUI();
 }
@@ -405,8 +405,14 @@ AP.addEventListener('play',updateUI);
 AP.addEventListener('pause',updateUI);
 AP.addEventListener('timeupdate',syncDrawer);
 AP.addEventListener('ended',function(){
-  if(CHAIN && CUR>=0 && CUR<PLIDS.length-1) playAid(PLIDS[CUR+1],true);
-  else{curAid=null;CHAIN=false;CUR=-1;highlightNode(null);updateUI();}
+  var next=(CUR>=0 && CUR<PLIDS.length-1)?PLIDS[CUR+1]:null;
+  if(!next){curAid=null;CHAIN=false;CUR=-1;highlightNode(null);updateUI();return;}
+  // si hay un modal abierto, avanzarlo también para que texto y audio queden sincronizados
+  if(document.getElementById('drawer').classList.contains('open')){
+    var node=document.querySelector('.node[data-aid="'+next+'"]');
+    if(node) openNode(node.getAttribute('data-k'),node);
+  }
+  playAid(next,true);
 });
 function buildPlayer(aid){
   if(!aid || (READY[LANG]||[]).indexOf(aid)<0) return '';
