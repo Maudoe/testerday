@@ -5,7 +5,7 @@ ui:{
  es:{
   choose:`Elegí tu idioma`, chooseSub:`Podés cambiarlo cuando quieras`, enter:`Entrar`,
   langES:`Español`, langEN:`Inglés`, toggle:`EN`,
-  eyebrow:`Alpega Group · QA Automation`, h1a:`Casos `, h1b:`& Soluciones`,
+  eyebrow:`Guía de estudio · QA Automation`, h1a:`Casos `, h1b:`& Soluciones`,
   intro:`Todo el flujo e2e del TMS en formato caso → solución: logística en todos los medios de transporte, API, Selenium/automation y las 20 queries SQL que un QA realmente escribe. Tocá cualquier tarjeta para expandir.`,
   navLog:`Logística e2e`, navApi:`API`, navSel:`Selenium / Automation`, navDb:`BBDD / SQL`,
   secLogTag:`01 · Logística end-to-end`, secLogH:`El flujo del TMS y sus problemas comunes`,
@@ -21,12 +21,12 @@ ui:{
   bLog:`Logística`, bApi:`API`, bSel:`Selenium`, bDb:`BBDD · SQL`,
   easy:`💡 En simple`, techDiv:`Versión técnica (para la entrevista)`, caso:`⚠ Caso / problema`, sol:`✓ Solución`, test:`🧪 Cómo lo prueba el tester`, code:`◈ Código`, out:`⤳ Resultado`,
   player:`Narración de este paso — voz + música`, playErr:`No se pudo cargar el audio. Abrí el HTML desde la carpeta <b>alpega</b> (junto a audio_modales/).`, noAudio:`(audio en preparación)`,
-  more:`Ver caso →`, footer:`Handbook QA Automation · <b>Alpega TMS</b> — caso → solución → cómo lo prueba el tester<span style="display:block;margin-top:11px;color:#8a8f9f;font-size:12.5px">Hecho por <a href="https://www.linkedin.com/in/mauricio-rodriguez-589955137/" target="_blank" rel="noopener" style="color:#d8b884;border-bottom:1px solid rgba(216,184,132,.45)">Mauricio Rodríguez</a> — QA Automation Engineer · Khon Kaen</span>`
+  more:`Ver caso →`, footer:`Handbook QA Automation · <b>TMS</b> — caso → solución → cómo lo prueba el tester<span style="display:block;margin-top:11px;color:#8a8f9f;font-size:12.5px">Hecho por <a href="https://www.linkedin.com/in/mauricio-rodriguez-589955137/" target="_blank" rel="noopener" style="color:#d8b884;border-bottom:1px solid rgba(216,184,132,.45)">Mauricio Rodríguez</a> — QA Automation Engineer · Khon Kaen</span>`
  },
  en:{
   choose:`Choose your language`, chooseSub:`You can change it anytime`, enter:`Enter`,
   langES:`Spanish`, langEN:`English`, toggle:`ES`,
-  eyebrow:`Alpega Group · QA Automation`, h1a:`Cases `, h1b:`& Solutions`,
+  eyebrow:`Study guide · QA Automation`, h1a:`Cases `, h1b:`& Solutions`,
   intro:`The whole TMS end-to-end flow as case → solution: logistics across every transport mode, API, Selenium/automation and the 20 SQL queries a QA actually writes. Tap any card to expand.`,
   navLog:`Logistics e2e`, navApi:`API`, navSel:`Selenium / Automation`, navDb:`Database / SQL`,
   secLogTag:`01 · Logistics end-to-end`, secLogH:`The TMS flow and its common problems`,
@@ -42,7 +42,7 @@ ui:{
   bLog:`Logistics`, bApi:`API`, bSel:`Selenium`, bDb:`DB · SQL`,
   easy:`💡 In plain words`, techDiv:`Technical version (for the interview)`, caso:`⚠ Case / problem`, sol:`✓ Solution`, test:`🧪 How the tester checks it`, code:`◈ Code`, out:`⤳ Outcome`,
   player:`Narration of this step — voice + music`, playErr:`Couldn't load the audio. Open the HTML from the <b>alpega</b> folder (next to audio_modales/).`, noAudio:`(audio in preparation)`,
-  more:`See case →`, footer:`QA Automation Handbook · <b>Alpega TMS</b> — case → solution → how the tester checks it<span style="display:block;margin-top:11px;color:#8a8f9f;font-size:12.5px">Built by <a href="https://www.linkedin.com/in/mauricio-rodriguez-589955137/" target="_blank" rel="noopener" style="color:#d8b884;border-bottom:1px solid rgba(216,184,132,.45)">Mauricio Rodríguez</a> — QA Automation Engineer · Khon Kaen</span>`
+  more:`See case →`, footer:`QA Automation Handbook · <b>TMS</b> — case → solution → how the tester checks it<span style="display:block;margin-top:11px;color:#8a8f9f;font-size:12.5px">Built by <a href="https://www.linkedin.com/in/mauricio-rodriguez-589955137/" target="_blank" rel="noopener" style="color:#d8b884;border-bottom:1px solid rgba(216,184,132,.45)">Mauricio Rodríguez</a> — QA Automation Engineer · Khon Kaen</span>`
  }
 },
 
