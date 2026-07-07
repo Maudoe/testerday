@@ -12,7 +12,7 @@
 :root{
   --bg:#060609; --bg2:#0c0d12; --surface:#13141b; --surface2:#1a1b24;
   --ink:#f2f4f9; --muted:#8a8f9f; --line:rgba(255,255,255,.09); --white:#fff;
-  --blue:#6c8cff; --gold:#d8b884; --silver:#c3c8d6; --rose:#e0728f; --lime:#7dd88a;
+  --blue:#6c8cff; --gold:#d8b884; --silver:#c3c8d6; --rose:#e0728f; --lime:#7dd88a; --cyb:#4bd4c0;
   --grad:linear-gradient(120deg,#f6f8fc,#c3c8d6 55%,#8b90a1);
   --sans:'Space Grotesk',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
 }
@@ -64,7 +64,7 @@ header p{color:var(--muted);max-width:600px;margin:0 auto;font-weight:300;font-s
 .nav a:hover{color:#fff;border-color:rgba(255,255,255,.3);}
 .nav a .dot{width:8px;height:8px;border-radius:50%;}
 .nav a .c{font-size:11px;opacity:.6;}
-.dot-log{background:var(--blue);} .dot-api{background:var(--gold);} .dot-sel{background:var(--lime);} .dot-db{background:var(--rose);}
+.dot-log{background:var(--blue);} .dot-api{background:var(--gold);} .dot-sel{background:var(--lime);} .dot-db{background:var(--rose);} .dot-cyb{background:var(--cyb);}
 .langbtn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px;font-weight:500;color:var(--gold);padding:7px 14px;border-radius:20px;border:1px solid rgba(216,184,132,.4);background:rgba(216,184,132,.08);cursor:pointer;transition:.25s;margin-left:6px;}
 .langbtn:hover{background:rgba(216,184,132,.18);}
 .langbtn .fl{width:22px;height:15px;border-radius:3px;overflow:hidden;display:inline-flex;}
@@ -73,7 +73,7 @@ header p{color:var(--muted);max-width:600px;margin:0 auto;font-weight:300;font-s
 .section{padding:56px 0 8px;position:relative;}
 .sec-head{max-width:1120px;margin:0 auto;padding:0 24px 8px;}
 .sec-tag{font-family:var(--sans);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:600;}
-.section.log .sec-tag{color:var(--blue);} .section.api .sec-tag{color:var(--gold);} .section.sel .sec-tag{color:var(--lime);} .section.db .sec-tag{color:var(--rose);}
+.section.log .sec-tag{color:var(--blue);} .section.api .sec-tag{color:var(--gold);} .section.sel .sec-tag{color:var(--lime);} .section.db .sec-tag{color:var(--rose);} .section.cyb .sec-tag{color:var(--cyb);}
 .sec-head h2{font-family:var(--sans);font-size:clamp(22px,3.6vw,34px);font-weight:600;margin:8px 0 6px;color:#fff;}
 .sec-head p{color:var(--muted);font-weight:300;max-width:640px;font-size:14.5px;}
 
@@ -114,6 +114,8 @@ header p{color:var(--muted);max-width:600px;margin:0 auto;font-weight:300;font-s
 .sel .node::before{background:linear-gradient(120deg,#a7ecb0,#5cbf6c);} .sel .n-txt .more{color:var(--lime);}
 .db .n-ico{background:rgba(224,114,143,.1);border-color:rgba(224,114,143,.3);color:var(--rose);}
 .db .node::before{background:linear-gradient(120deg,#f3a6bb,#e0728f);} .db .n-txt .more{color:var(--rose);}
+.cyb .n-ico{background:rgba(75,212,192,.1);border-color:rgba(75,212,192,.3);color:var(--cyb);}
+.cyb .node::before{background:linear-gradient(120deg,#7fe9d8,#3bbfad);} .cyb .n-txt .more{color:var(--cyb);}
 
 .drawer-bd{position:fixed;inset:0;background:rgba(4,5,10,.7);backdrop-filter:blur(6px);z-index:90;opacity:0;visibility:hidden;transition:.35s;}
 .drawer-bd.open{opacity:1;visibility:visible;}
@@ -124,7 +126,7 @@ header p{color:var(--muted);max-width:600px;margin:0 auto;font-weight:300;font-s
 .drawer-close{position:absolute;top:20px;right:22px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff;font-size:18px;cursor:pointer;transition:.25s;z-index:2;}
 .drawer-close:hover{background:var(--gold);color:#1a140a;border-color:var(--gold);transform:rotate(90deg);}
 .d-badge{display:inline-block;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:16px;}
-.d-log{color:var(--blue);background:rgba(108,140,255,.12);} .d-api{color:var(--gold);background:rgba(216,184,132,.14);} .d-sel{color:var(--lime);background:rgba(125,216,138,.14);} .d-db{color:var(--rose);background:rgba(224,114,143,.14);}
+.d-log{color:var(--blue);background:rgba(108,140,255,.12);} .d-api{color:var(--gold);background:rgba(216,184,132,.14);} .d-sel{color:var(--lime);background:rgba(125,216,138,.14);} .d-db{color:var(--rose);background:rgba(224,114,143,.14);} .d-cyb{color:var(--cyb);background:rgba(75,212,192,.14);}
 .drawer h2{font-family:var(--sans);font-size:24px;font-weight:600;color:#fff;line-height:1.18;margin-bottom:22px;}
 .d-sec{margin-bottom:22px;}
 .d-sec h4{font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:9px;}
@@ -217,6 +219,7 @@ footer b{color:var(--gold);font-weight:500;}
     <a href="#api"><span class="dot dot-api"></span><span id="navApi"></span> <span class="c" id="cApi"></span></a>
     <a href="#sel"><span class="dot dot-sel"></span><span id="navSel"></span> <span class="c" id="cSel"></span></a>
     <a href="#db"><span class="dot dot-db"></span><span id="navDb"></span> <span class="c" id="cDb"></span></a>
+    <a href="#cyb"><span class="dot dot-cyb"></span><span id="navCyb"></span> <span class="c" id="cCyb"></span></a>
     <button class="langbtn" id="plToggle" title="Playlist">♫</button>
     <button class="langbtn" id="langToggle"></button>
   </div></nav>
@@ -244,6 +247,11 @@ footer b{color:var(--gold);font-weight:500;}
   <section class="section db" id="db">
     <div class="sec-head"><div class="sec-tag" id="secDbTag"></div><h2 id="secDbH"></h2><p id="secDbP"></p></div>
     <div class="grid" id="gridDb"></div>
+  </section>
+
+  <section class="section cyb" id="cyb">
+    <div class="sec-head"><div class="sec-tag" id="secCybTag"></div><h2 id="secCybH"></h2><p id="secCybP"></p></div>
+    <div class="grid" id="gridCyb"></div>
   </section>
 
   <footer id="footer"></footer>
@@ -282,7 +290,21 @@ var IC={
  lock:'<rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
  sel:'<path d="M4 5h16v11H4z"/><path d="M2 20h20M9 9l3 3 3-4"/>',
  db:'<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
- clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ shield:'<path d="M12 3l7 3v5c0 4.6-3 8.2-7 10-4-1.8-7-5.4-7-10V6z"/><path d="m9 12 2 2 4-4"/>',
+ face:'<circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01"/><path d="M8.5 14.5c1.6 1.4 5.4 1.4 7 0"/>',
+ wifi:'<path d="M4 11a12 12 0 0 1 16 0M7 14.5a7 7 0 0 1 10 0"/><circle cx="12" cy="18.5" r="1.2"/>',
+ qr:'<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"/>',
+ key:'<circle cx="8" cy="14" r="4"/><path d="M11 11 20 2M17 5l2 2M14 8l2 2"/>',
+ geo:'<path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+ file:'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/>',
+ bolt:'<path d="M13 2 4 14h6l-1 8 9-12h-6z"/>',
+ eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/>',
+ mobile:'<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/>',
+ code:'<path d="m9 8-5 4 5 4M15 8l5 4-5 4"/>',
+ upload:'<path d="M12 15V4M8 8l4-4 4 4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/>',
+ mask:'<path d="M3 6c4-1 14-1 18 0 0 6-3 10-9 12C6 16 3 12 3 6z"/><path d="M8 10h.01M16 10h.01"/>',
+ server:'<rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/>'
 };
 function svg(k){return '<svg viewBox="0 0 24 24">'+(IC[k]||IC.bug)+'</svg>';}
 var FLAG={
@@ -291,7 +313,7 @@ var FLAG={
 };
 
 /* narración ya generada por idioma (todos los modales, ES + EN) */
-var ALLIDS=['f1','f2','f3','f4','f5','f6','f7','f8','l1','l2','l3','l4','l5','l6','l7','l8','l9','l10','l11','l12','l13','l14','a1','a2','a3','a4','a5','a6','a7','a8','a9','a10','a11','a12','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','d16','d17','d18','d19','d20'];
+var ALLIDS=['f1','f2','f3','f4','f5','f6','f7','f8','l1','l2','l3','l4','l5','l6','l7','l8','l9','l10','l11','l12','l13','l14','a1','a2','a3','a4','a5','a6','a7','a8','a9','a10','a11','a12','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','d16','d17','d18','d19','d20','x1','x2','x3','x4','x5','x6','x7','x8','x9','x10','x11','x12','x13','x14','x15','x16','x17','x18','x19','x20','x21','x22','x23','x24','x25','x26','x27','x28','x29','x30','x31','x32','x33','x34','x35','x36','x37','x38','x39','x40','x41','x42','x43','x44','x45','x46','x47','x48','x49','x50'];
 var READY={es:ALLIDS, en:ALLIDS};
 
 var A=window.ALPEGA, LANG=null, REG={}, seq=0, NODES=[];
@@ -328,19 +350,21 @@ function render(){
   set('eyebrow',u.eyebrow);
   document.getElementById('h1').innerHTML=u.h1a+'<span class="g">'+u.h1b+'</span>';
   set('intro',u.intro);
-  set('navLog',u.navLog); set('navApi',u.navApi); set('navSel',u.navSel); set('navDb',u.navDb);
+  set('navLog',u.navLog); set('navApi',u.navApi); set('navSel',u.navSel); set('navDb',u.navDb); set('navCyb',u.navCyb);
   set('secLogTag',u.secLogTag); set('secLogH',u.secLogH); set('secLogP',u.secLogP);
   set('modesLbl',u.modesLbl); set('mRoad',u.mRoad); set('mRail',u.mRail); set('mSea',u.mSea); set('mAir',u.mAir); set('mInter',u.mInter); set('modesNote',u.modesNote);
   set('secApiTag',u.secApiTag); set('secApiH',u.secApiH); set('secApiP',u.secApiP);
   set('secSelTag',u.secSelTag); set('secSelH',u.secSelH); set('secSelP',u.secSelP);
   set('secDbTag',u.secDbTag); set('secDbH',u.secDbH); set('secDbP',u.secDbP);
+  set('secCybTag',u.secCybTag); set('secCybH',u.secCybH); set('secCybP',u.secCybP);
   set('footer',u.footer);
   fillGrid('flowE2E',A.flow,'log',true,'f');
   fillGrid('gridLog',A.log,'log',false,'l');
   fillGrid('gridApi',A.api,'api',false,'a');
   fillGrid('gridSel',A.sel,'sel',false,'s');
   fillGrid('gridDb',A.db,'db',false,'d');
-  set('cLog',A.flow.length+A.log.length); set('cApi',A.api.length); set('cSel',A.sel.length); set('cDb',A.db.length);
+  fillGrid('gridCyb',A.cyb,'cyb',false,'x');
+  set('cLog',A.flow.length+A.log.length); set('cApi',A.api.length); set('cSel',A.sel.length); set('cDb',A.db.length); set('cCyb',A.cyb.length);
   var other=(LANG==='es')?'en':'es';
   document.getElementById('langToggle').innerHTML='<span class="fl">'+FLAG[other]+'</span>'+u.toggle;
   buildPlaylist();
@@ -447,6 +471,7 @@ function buildPlaylist(){
   grp(u.navApi,'dot-api',A.api,'api','a');
   grp(u.navSel,'dot-sel',A.sel,'sel','s');
   grp(u.navDb,'dot-db',A.db,'db','d');
+  grp(u.navCyb,'dot-cyb',A.cyb,'cyb','x');
   PLIDS=PL.map(function(x){return x.aid;});
   document.getElementById('plList').innerHTML=html;
   var t=PLT();
@@ -461,8 +486,8 @@ function buildPlaylist(){
 /* ===== Drawer ===== */
 function openNode(id,el){
   var r=REG[id]; if(!r) return; var item=r.item,loc=item[LANG],u=T();
-  var bName={log:u.bLog,api:u.bApi,sel:u.bSel,db:u.bDb}[r.cat];
-  var bCls={log:'d-log',api:'d-api',sel:'d-sel',db:'d-db'}[r.cat];
+  var bName={log:u.bLog,api:u.bApi,sel:u.bSel,db:u.bDb,cyb:u.bCyb}[r.cat];
+  var bCls={log:'d-log',api:'d-api',sel:'d-sel',db:'d-db',cyb:'d-cyb'}[r.cat];
   var html='<span class="d-badge '+bCls+'">'+(loc.kick? bName+' · '+loc.kick : bName)+'</span>'+
     '<h2>'+loc.t+'</h2>'+
     buildPlayer(r.aid)+
