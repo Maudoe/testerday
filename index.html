@@ -164,7 +164,10 @@ pre code{font-family:var(--mono);font-size:12.5px;line-height:1.65;color:#d6dbe8
 .playlist{position:fixed;top:0;left:0;width:300px;height:100vh;z-index:60;display:flex;flex-direction:column;background:linear-gradient(200deg,#111219,#0a0b10);border-right:1px solid var(--line);transform:translateX(-100%);transition:transform .4s cubic-bezier(.22,.61,.36,1);}
 .playlist.open{transform:none;box-shadow:20px 0 60px rgba(0,0,0,.5);}
 @media(min-width:1200px){.playlist{transform:none;}body.app-on .container{margin-left:300px;}#plToggle{display:none;}}
-.pl-head{padding:20px 18px 15px;border-bottom:1px solid var(--line);}
+.pl-head{padding:20px 18px 15px;border-bottom:1px solid var(--line);position:relative;}
+.pl-close{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--muted);font-size:16px;line-height:1;cursor:pointer;display:none;align-items:center;justify-content:center;transition:.2s;}
+.pl-close:hover{color:#fff;border-color:rgba(255,255,255,.3);}
+@media(max-width:1199px){.pl-close{display:flex;}}
 .pl-title{font-family:var(--sans);font-size:14px;font-weight:600;color:#fff;letter-spacing:.5px;display:flex;align-items:center;gap:8px;}
 .pl-sub{font-size:11.5px;color:var(--muted);font-weight:300;margin:5px 0 13px;}
 .pl-allbtn{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-size:13px;font-weight:600;color:#1a140a;background:linear-gradient(135deg,#efd7a0,#c9a24b);border:none;border-radius:12px;padding:11px;cursor:pointer;transition:.2s;box-shadow:0 6px 18px rgba(201,162,75,.28);}
@@ -259,6 +262,7 @@ footer b{color:var(--gold);font-weight:500;}
 
 <aside class="playlist" id="playlist">
   <div class="pl-head">
+    <button class="pl-close" id="plClose" aria-label="Cerrar playlist">✕</button>
     <div class="pl-title">♫ <span id="plTitle">Playlist</span></div>
     <div class="pl-sub" id="plSub"></div>
     <button class="pl-allbtn" id="plAll"><span class="i">▶</span><span class="txt">Play all</span></button>
@@ -568,6 +572,7 @@ function bindNodes(){
   flags.querySelectorAll('.flagcard').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'));});});
   document.getElementById('langToggle').addEventListener('click',function(){setLang(LANG==='es'?'en':'es');});
   document.getElementById('plToggle').addEventListener('click',function(){document.getElementById('playlist').classList.toggle('open');});
+  document.getElementById('plClose').addEventListener('click',function(){document.getElementById('playlist').classList.remove('open');});
   document.getElementById('plAll').addEventListener('click',function(){
     if(!AP.paused){AP.pause();return;}
     CHAIN=true;
